@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-09-2022 a las 23:38:53
+-- Tiempo de generación: 30-09-2022 a las 03:26:14
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -270,19 +270,23 @@ INSERT INTO `pagosxestudiante` (`id_pago_pagoest`, `id_est_pagoest`, `tipo_pago_
 --
 
 CREATE TABLE `usuarios` (
+  `ID` int(11) NOT NULL,
+  `Nombre` text NOT NULL,
   `Usuario` varchar(20) NOT NULL,
   `Correo_usu` varchar(20) NOT NULL,
   `Contraseña` varchar(8) NOT NULL,
   `Rol` varchar(20) NOT NULL,
-  `Imagen` varchar(50) NOT NULL
+  `Imagen` text NOT NULL,
+  `Estado` int(11) NOT NULL,
+  `Fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`Usuario`, `Correo_usu`, `Contraseña`, `Rol`, `Imagen`) VALUES
-('1052378529', 'dianapzm24@outlook.c', 'root', 'admin', 'icon_user.png');
+INSERT INTO `usuarios` (`ID`, `Nombre`, `Usuario`, `Correo_usu`, `Contraseña`, `Rol`, `Imagen`, `Estado`, `Fecha`) VALUES
+(1, 'Usuario Administrador\r\n', '1052378529', 'dianapzm24@outlook.c', 'root', 'admin', '', 1, '2022-09-14 17:08:29');
 
 --
 -- Índices para tablas volcadas

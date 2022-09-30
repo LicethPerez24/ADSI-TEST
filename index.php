@@ -1,6 +1,6 @@
-iuedu
+<?php
 
-require_once_"Controladores/plantilla.controlador.php";
+require_once "Controladores/plantilla.controlador.php";
 
 
 $plantilla = new ControladorPlantilla();
