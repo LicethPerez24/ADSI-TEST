@@ -156,7 +156,7 @@
 
           <span class="input-group-addon"><i class="fa fa-lock"></i></span>
 
-          <input type="password" class="form-control input-lg" name="NuevoContraseña" placeholder="Ingresar Contraseña" required>
+          <input type="password" class="form-control input-lg" name="NuevoPassword" placeholder="Ingresar Contraseña" required>
 
         </div>
 
@@ -170,9 +170,9 @@
 
           <span class="input-group-addon"><i class="fa fa-users"></i></span>
 
-          <select class="form-control input-lg" name="NuevoRol">
+          <select class="form-control input-lg" name="NuevoPerfil">
 
-          <option value="">Seleccionar Rol</option>
+          <option value="">Seleccionar Perfil</option>
 
           <option value="Administrador">Administrador</option>
 
@@ -192,11 +192,11 @@
 
         <div class="panel">SUBIR FOTO</div>
 
-        <input type="file" class="NuevaFoto" name="NuevaFoto">
+        <input type="file" id="NuevaFoto" name="NuevaFoto">
 
-        <p class="help-block">Peso máximo de la foto 2 MB</p>
+        <p class="help-block">Peso máximo de la foto 200 MB</p>
 
-        <img src="Vistas/Img/Usuarios/default/Anonymous.png" class="img-thumbnail previsualizar" width="100px">
+        <img src="Vistas/Img/Usuarios/default/Anonymous.png" class="img-thumbnail" width="100px">
 
         </div>
 
@@ -213,15 +213,6 @@
         <button type="submit" class="btn btn-primary mb1 bg-green">Guardar usuario</button>
 
       </div>
-
-      <?php
-
-      $crearUsuario = new ControladorUsuarios();
-      $crearUsuario -> ctrCrearUsuario();
-
-
-
-      ?>
 
       </form>
 

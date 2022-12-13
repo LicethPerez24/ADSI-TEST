@@ -1,3 +1,8 @@
+ <?php
+session_start();
+
+?>
+ 
  <!DOCTYPE html>
 <html>
 <head>
@@ -32,6 +37,10 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
+   <!-- DataTables -->
+   <link rel="stylesheet" href="Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+   <link rel="stylesheet" href="Vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
+
   <!-- PLUGINS DE JAVASCRIPT -->
 
   <!-- jQuery 3 -->
@@ -48,6 +57,15 @@
 
   <!-- AdminLTE for demo purposes -->
   <script src="Vistas/dist/js/demo.js"></script>
+
+  <!-- DataTables -->
+  <script src="Vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <script src="Vistas/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+  <script src="Vistas/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
+
+    <!-- SweetAlert 2.1.2 -->
+    <script src="Vistas/plugins/SweetAlert2.1.2/sweetalert.min.js"></script>
   
 </head>
 
@@ -80,7 +98,8 @@
        $_GET["ruta"] == "docentes" ||
        $_GET["ruta"] == "estudiantes" ||
        $_GET["ruta"] == "asignaturas" ||
-       $_GET["ruta"] == "cursos"){
+       $_GET["ruta"] == "cursos" ||
+       $_GET["ruta"] == "salir"){
 
       include "Modulos/".$_GET["ruta"].".php";
 
@@ -110,6 +129,7 @@
   ?>
 
 <script src="Vistas/Js/plantilla.js"></script>
+<script src="Vistas/Js/usuarios.js"></script>
 
 
 </body>

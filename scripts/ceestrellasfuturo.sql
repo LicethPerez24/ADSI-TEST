@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-09-2022 a las 03:26:14
+-- Tiempo de generación: 25-10-2022 a las 01:23:13
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -273,7 +273,6 @@ CREATE TABLE `usuarios` (
   `ID` int(11) NOT NULL,
   `Nombre` text NOT NULL,
   `Usuario` varchar(20) NOT NULL,
-  `Correo_usu` varchar(20) NOT NULL,
   `Contraseña` varchar(8) NOT NULL,
   `Rol` varchar(20) NOT NULL,
   `Imagen` text NOT NULL,
@@ -285,8 +284,8 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`ID`, `Nombre`, `Usuario`, `Correo_usu`, `Contraseña`, `Rol`, `Imagen`, `Estado`, `Fecha`) VALUES
-(1, 'Usuario Administrador\r\n', '1052378529', 'dianapzm24@outlook.c', 'root', 'admin', '', 1, '2022-09-14 17:08:29');
+INSERT INTO `usuarios` (`ID`, `Nombre`, `Usuario`, `Contraseña`, `Rol`, `Imagen`, `Estado`, `Fecha`) VALUES
+(1, 'Usuario Administrador\r\n', '1052378529', 'admin123', 'admin', '', 1, '2022-09-30 03:08:35');
 
 --
 -- Índices para tablas volcadas
@@ -361,8 +360,7 @@ ALTER TABLE `pagosxestudiante`
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`Usuario`),
-  ADD UNIQUE KEY `Correo_usu` (`Correo_usu`);
+  ADD PRIMARY KEY (`Usuario`);
 
 --
 -- Restricciones para tablas volcadas

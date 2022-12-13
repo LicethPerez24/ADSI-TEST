@@ -50,9 +50,41 @@
 
             <li> 
                 <a href="cursos">
-                <i class="fa fa-list"></i>
+                <i class="fa fa-chalkboard-user"></i>
                     <span>Cursos</span>
                 </a>
+            </li>
+
+            <li class="treeview"> 
+                <a href="#">
+                <i class="fa fa-list-ul"></i>
+                    <span>Pagos</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="consultar.pagos">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Consultar pagos</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="crear-pago">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Crear pago</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="admin-pago">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Administrar pagos</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
 
 

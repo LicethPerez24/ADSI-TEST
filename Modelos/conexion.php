@@ -1,8 +1,8 @@
 <?php
 
-class Conexion{
+class conexion{
 
-    public function Conectar(){
+    static public function conectar(){
 
         $link = new PDO("mysql:host=localhost;dbname=ceestrellasfuturo",
                         "root",
